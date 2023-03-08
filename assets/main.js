@@ -19,15 +19,15 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 */
 
 // Chiedi all'utente i km da percorrere e l'età
-var km = parseFloat(prompt("Quanti chilometri vuoi percorrere?"));
-var age = parseInt(prompt("Qual è la tua età?"));
+let km = parseFloat(prompt("Quanti chilometri vuoi percorrere?"));
+let age = parseInt(prompt("Qual è la tua età?"));
 
 console.log(km);
 console.log(age);
 
 // Calcola il prezzo del biglietto
-var pricePerKm = 0.21;
-var totalPrice = km * pricePerKm;
+let pricePerKm = 0.21;
+let totalPrice = km * pricePerKm;
 
 // Applica lo sconto per i minorenni e gli over 65
 if (age < 18) {
@@ -39,4 +39,4 @@ if (age < 18) {
 console.log(totalPrice);
 
 // Mostra il prezzo finale
-alert("Il prezzo del tuo biglietto è di €" + totalPrice.toFixed(2));
+document.getElementById('demo').innerHTML = ("Il prezzo del tuo biglietto è di €" + totalPrice.toFixed(2));
