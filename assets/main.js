@@ -28,9 +28,9 @@ var totalPrice = km * pricePerKm;
 
 // Applica lo sconto per i minorenni e gli over 65
 if (age < 18) {
-  totalPrice *= 0.8; // Sconto del 20%
+  totalPrice = pricePerKm * 0.8; // Sconto del 20%
 } else if (age >= 65) {
-  totalPrice *= 0.6; // Sconto del 40%
+  totalPrice = pricePerKm * 0.6; // Sconto del 40%
 }
 
 // Mostra il prezzo finale
