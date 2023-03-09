@@ -19,14 +19,13 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 */
 
 // Chiedi all'utente i km da percorrere e l'età
-let km = parseFloat(prompt("Quanti chilometri vuoi percorrere?"));
-let age = parseInt(prompt("Qual è la tua età?"));
+const km = Number(prompt("Quanti chilometri vuoi percorrere?"));
+const age = Number(prompt("Qual è la tua età?"));
 
-console.log(km);
-console.log(age);
+console.log(km, age);
 
 // Calcola il prezzo del biglietto
-let pricePerKm = 0.21;
+const pricePerKm = 0.21;
 let totalPrice = km * pricePerKm;
 
 // Applica lo sconto per i minorenni e gli over 65
