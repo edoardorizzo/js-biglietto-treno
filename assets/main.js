@@ -28,14 +28,21 @@ console.log(km, age);
 const pricePerKm = 0.21;
 let totalPrice = km * pricePerKm;
 
+console.log(totalPrice);
+
 // Applica lo sconto per i minorenni e gli over 65
 if (age < 18) {
-  totalPrice = pricePerKm * 0.8; // Sconto del 20%
+  discount =  0.2; // Sconto del 20%
 } else if (age >= 65) {
-  totalPrice = pricePerKm * 0.6; // Sconto del 40%
+  discount = 0.4; // Sconto del 40%
 }
 
-console.log(totalPrice);
+let totalDiscount = totalPrice * discount;
+console.log(totalDiscount);
+
+let ticketPrice = totalPrice - totalDiscount;
+console.log(ticketPrice);
+
 
 // Mostra il prezzo finale
 document.getElementById('demo').innerHTML = ("Il prezzo del tuo biglietto è di €" + totalPrice.toFixed(2));
